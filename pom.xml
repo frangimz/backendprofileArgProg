@@ -21,7 +21,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -56,13 +55,12 @@
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
-<dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-jdbc</artifactId>
-    <version>10.1.0-M16</version>
-</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>10.1.0-M16</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -79,19 +77,24 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.29</version> 
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security 
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<version>2.7.0</version>
 		</dependency>
-
-		https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt 
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
-		</dependency> -->
+		</dependency> 
+<!-- https://mvnrepository.com/artifact/org.apache.wicket/wicket-auth-roles -->
+<dependency>
+    <groupId>org.apache.wicket</groupId>
+    <artifactId>wicket-auth-roles</artifactId>
+    <version>9.10.0</version>
+</dependency>
 
 	</dependencies>
 
