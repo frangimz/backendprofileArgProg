@@ -6,10 +6,8 @@ Backend para el porfolio del proyecto Final del Curso de Argentina Programa
 
 ## Para correr el proyecto ⚙️
 
-Despues de haberlo clonado si corres el archivo BprofileApplication.java
-
-me salta errores,
-para corregirlo antes debo entrar a 
+Despues de haberlo clonado el proyecto, si corres el archivo BprofileApplication.java me salta errores.
+Para corregirlo antes debo entrar a 
 http://localhost/phpmyadmin/index.php
 poner usuario y contraseña
 
