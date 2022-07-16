@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.bprofilefrangimz.bprofile.Security.Service.UserDetailsImpl;
 import com.bprofilefrangimz.bprofile.Security.jwt.JwtEntryPoint;
@@ -42,8 +43,8 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
         return super.authenticationManager();
     }
 
-    @Override
     @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         // TODO Auto-generated method stub
         return super.authenticationManagerBean();
@@ -59,12 +60,13 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         // TODO Auto-generated method stub
         http.cors().and().csrf().disable()
-        .authorizeRequests()
-        .antMatchers("/auth/**").permitAll()
-        .anyRequest().authenticated()
-        .and()
-        .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-        .and()
-        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .authorizeRequests()
+            .antMatchers("/auth/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
+            .and()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }
