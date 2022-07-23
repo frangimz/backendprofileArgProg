@@ -61,7 +61,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
         // TODO Auto-generated method stub
         http.cors().and().csrf().disable()
             .authorizeRequests()
-            .antMatchers("/auth/**").permitAll()
+            .antMatchers("**").permitAll()
             .anyRequest().authenticated()
             .and()
             .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
