@@ -17,8 +17,7 @@ import java.util.List;
 import com.bprofilefrangimz.bprofile.Entity.Persona;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin(origins = "https://hosting-myprofile.web.app")
+@CrossOrigin(origins = "https://hosting-myprofile.web.app")
 public class PersonaControler {
     @Autowired IPersonaService ipersonaService;
 
