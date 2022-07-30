@@ -21,5 +21,7 @@ public class Persona {
     @Size(min = 1, max = 50, message = "no cumple")
     private String nombre;
     private String apellido;
-    private String img;    
-}
+    private String img;
+    private String titulo;
+    private String descripcion;    
+}   

@@ -17,7 +17,8 @@ import java.util.List;
 import com.bprofilefrangimz.bprofile.Entity.Persona;
 
 @RestController
-@CrossOrigin(origins = "https://hosting-myprofile.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://hosting-myprofile.web.app")
 public class PersonaControler {
     @Autowired IPersonaService ipersonaService;
 
@@ -45,12 +46,16 @@ public class PersonaControler {
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,
-                               @RequestParam("img") String nuevoImg ){
+                               @RequestParam("img") String nuevoImg,
+                               @RequestParam("titulo") String nuevoTitulo,
+                               @RequestParam("descripcion") String nuevoDescripcion){
         Persona persona = ipersonaService.findPersona(id);
 
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
+        persona.setTitulo(nuevoTitulo);
+        persona.setDescripcion(nuevoDescripcion);
 
         ipersonaService.savePersona(persona);
         return persona;
