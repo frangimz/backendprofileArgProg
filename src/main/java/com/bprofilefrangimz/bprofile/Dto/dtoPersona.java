@@ -1,41 +1,29 @@
-package com.bprofilefrangimz.bprofile.Entity;
+package com.bprofilefrangimz.bprofile.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter @Setter
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple")
+public class dtoPersona {
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
     private String img;
+    @NotBlank
     private String titulo;
-    private String descripcion;   
+    @NotBlank
+    private String descripcion;
     //Constructores
-    public Persona() {
+    public dtoPersona() {
     }
-    public Persona(@NotNull @Size(min = 1, max = 200, message = "no cumple") String nombre, String apellido, String img,
-            String titulo, String descripcion) {
+    public dtoPersona(@NotBlank String nombre, @NotBlank String apellido, String img, @NotBlank String titulo,
+            @NotBlank String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.titulo = titulo;
         this.descripcion = descripcion;
     }
-    //Getters and Setters
+    //Settes and Getters
     public String getNombre() {
         return nombre;
     }
@@ -66,4 +54,5 @@ public class Persona {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-}   
+
+}
