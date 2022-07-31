@@ -7,14 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Proyecto {
-    public Proyecto(String nombre, String fecha, String descripcion, String img) {
-        this.nombre = nombre;
-        this.fecha = fecha;
-        this.descripcion = descripcion;
-        this.img = img;
-    }
-    public Proyecto() {
-    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int id;
@@ -22,6 +14,16 @@ public class Proyecto {
     private String fecha;
     private String descripcion;
     private String img;
+    //constructores
+    public Proyecto() {
+    }
+    public Proyecto(String nombre, String fecha, String descripcion, String img) {
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.descripcion = descripcion;
+        this.img = img;
+    }
+    //Getters and Setters
     public int getId() {
         return id;
     }

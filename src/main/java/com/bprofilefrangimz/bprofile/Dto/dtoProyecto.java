@@ -11,6 +11,9 @@ public class dtoProyecto {
     private String descripcion;
     @NotBlank
     private String img;
+    //Constructores
+    public dtoProyecto() {
+    }
     public dtoProyecto(@NotBlank String nombre, @NotBlank String fecha, @NotBlank String descripcion,
             @NotBlank String img) {
         this.nombre = nombre;
@@ -18,8 +21,7 @@ public class dtoProyecto {
         this.descripcion = descripcion;
         this.img = img;
     }
-    public dtoProyecto() {
-    }
+    //Getters and Setters
     public String getNombre() {
         return nombre;
     }
