@@ -26,8 +26,8 @@ import com.bprofilefrangimz.bprofile.Entity.Persona;
 
 @RestController
 @RequestMapping("personas")
-@CrossOrigin(origins = "https://hosting-myprofile.web.app")
-//@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://hosting-myprofile.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaControler {
     @Autowired IPersonaService ipersonaService;
     @Autowired
@@ -89,5 +89,10 @@ public class PersonaControler {
     @GetMapping("/traer/perfil")
     public Persona findPersona(){
         return ipersonaService.findPersona(1);
+    }
+    
+    @GetMapping("/test")
+    public String test() {
+    return "El backend está funcionando";
     }
 }
