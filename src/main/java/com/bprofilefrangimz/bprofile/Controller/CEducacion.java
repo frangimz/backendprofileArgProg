@@ -22,7 +22,7 @@ import com.bprofilefrangimz.bprofile.Service.SEducacion;
 
 @RestController
 @RequestMapping("educa")
-@CrossOrigin(origins = "https://hosting-myprofile.web.app")
+@CrossOrigin(origins = "https://frangimz.dev")
 //@CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
     @Autowired
