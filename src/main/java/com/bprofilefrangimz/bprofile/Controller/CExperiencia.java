@@ -22,7 +22,7 @@ import com.bprofilefrangimz.bprofile.Service.SExperiencia;
 
 @RestController
 @RequestMapping("explab")
-@CrossOrigin(origins = {"https://www.frangimz.dev", "https://frangimz.dev"})
+@CrossOrigin(origins = "https://www.frangimz.dev")
 //@CrossOrigin(origins = "http://localhost:4200")
 public class CExperiencia {
     @Autowired
