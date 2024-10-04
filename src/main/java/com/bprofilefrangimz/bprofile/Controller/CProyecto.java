@@ -23,7 +23,7 @@ import com.bprofilefrangimz.bprofile.Service.SProyecto;
 
 @RestController
 @RequestMapping("project")
-@CrossOrigin(origins = "https://frangimz.dev")
+@CrossOrigin(origins = {"https://www.frangimz.dev", "https://frangimz.dev"})
 //@CrossOrigin(origins = "http://localhost:4200")
 public class CProyecto {
     @Autowired
