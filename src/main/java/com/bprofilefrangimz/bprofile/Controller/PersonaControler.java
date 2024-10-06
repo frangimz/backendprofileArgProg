@@ -26,8 +26,9 @@ import com.bprofilefrangimz.bprofile.Entity.Persona;
 
 @RestController
 @RequestMapping("personas")
-@CrossOrigin(origins = "https://www.frangimz.dev")
+//@CrossOrigin(origins = "https://www.frangimz.dev")
 //@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"https://www.frangimz.dev", "http://localhost:4200"})
 public class PersonaControler {
     @Autowired IPersonaService ipersonaService;
     @Autowired
