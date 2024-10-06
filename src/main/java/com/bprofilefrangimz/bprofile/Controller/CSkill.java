@@ -23,8 +23,8 @@ import com.bprofilefrangimz.bprofile.Service.SSkill;
 
 @RestController
 @RequestMapping("skill")
-@CrossOrigin(origins = "https://www.frangimz.dev")
-//@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://www.frangimz.dev")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CSkill{
     @Autowired
     SSkill sSkill;
